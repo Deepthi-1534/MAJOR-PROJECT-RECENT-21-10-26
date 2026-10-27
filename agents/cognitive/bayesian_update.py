@@ -1,7 +1,7 @@
 """bayesian_update.py - Stage 2: sequential categorical belief updating over H0/H1/H2."""
 import math
 from typing import Dict, List, Optional
-from .common import HYPS, EPS, Evidence, clip01, log_norm_pdf, normalize_log
+from .common import HYPS, EPS, Evidence, clip01, log_norm_pdf, normalize_log, presence_loglik, PRESENCE_KEY
 
 
 def bayesian_update(evidence: List[Evidence], models,
@@ -16,6 +16,15 @@ def bayesian_update(evidence: List[Evidence], models,
     belief = normalize_log(logp)
     trace = [{"step": "prior", "agent": "-", "weight": 1.0, "spread": 0.0,
               "belief": {h: round(v, 4) for h, v in belief.items()}}]
+
+    # Which agents reported at all (only with calibrated models; otherwise adds nothing).
+    if models.get(PRESENCE_KEY):
+        pres = presence_loglik(models, [e.name for e in evidence])
+        for h in HYPS:
+            logp[h] += pres[h]
+        belief = normalize_log(logp)
+        trace.append({"step": "presence", "agent": "all", "weight": 1.0, "spread": 0.0,
+                      "belief": {h: round(v, 4) for h, v in belief.items()}})
 
     items = []
     for e in evidence:

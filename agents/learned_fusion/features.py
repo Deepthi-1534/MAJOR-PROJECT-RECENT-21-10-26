@@ -71,3 +71,75 @@ def candidate_to_features(c: Dict) -> List[float]:
         "aspect_ratio": w / h,
     }
     return [float(row[name]) for name in FEATURE_NAMES]
+
+
+# --------------------------------------------------------------------------------------
+# Capture-context features
+#
+# A candidate is much easier to judge relative to the OTHER candidates found in the same
+# image: "is this the most confident spatial detection in the frame?", "is it much larger
+# than the rest?". These are computed from the base features above plus the box, so existing
+# data/fusion/*.csv files (which already hold those columns) work unchanged.
+# --------------------------------------------------
+
+IMAGE_W = 512.0          # MUDCAD-X frames are 512 x 512 (boxes never exceed this)
+IMAGE_H = 512.0
+
+_CONTEXT_SOURCES = ["spatial_evidence", "spectral_evidence", "feature_evidence",
+                    "mean_evidence", "max_evidence", "log_area"]
+CONTEXT_NAMES: List[str] = (
+    [f"{s}_{kind}" for s in _CONTEXT_SOURCES for kind in ("rank", "rel_max", "rel_mean")]
+    + ["n_cands", "n_spatial_in_cap", "cx", "cy", "area_frac", "touch_border",
+       "sp_x_support", "sp_x_unc", "evid_minus_conf"]
+)
+ALL_FEATURE_NAMES: List[str] = FEATURE_NAMES + CONTEXT_NAMES
+
+
+def _rank_pct(v):
+    """Average rank / n (ties share a rank) - same as pandas rank(pct=True)."""
+    import numpy as np
+    from scipy.stats import rankdata
+    return rankdata(v, method="average") / len(v)
+
+
+def add_context(base, boxes):
+    """
+    base  : array-like (n, len(FEATURE_NAMES)) - base features of ALL candidates of ONE image
+    boxes : list of n boxes [x, y, w, h] (None allowed)
+    Returns an (n, len(ALL_FEATURE_NAMES)) numpy array.
+    """
+    import numpy as np
+    base = np.asarray(base, dtype=float).reshape(-1, len(FEATURE_NAMES))
+    n = len(base)
+    if n == 0:
+        return base.reshape(0, len(ALL_FEATURE_NAMES))
+    col = {name: base[:, i] for i, name in enumerate(FEATURE_NAMES)}
+
+    cols = []
+    for s in _CONTEXT_SOURCES:
+        v = col[s]
+        cols += [_rank_pct(v), v - v.max(), v - v.mean()]
+    cols.append(np.full(n, float(n)))
+    cols.append(np.full(n, float(col["spatial_present"].sum())))
+
+    b = np.array([[to_float(x) for x in (bx if bx is not None and len(bx) >= 4 else [0, 0, 1, 1])[:4]]
+                  for bx in boxes], dtype=float).reshape(n, 4)
+    x, y, w, h = b[:, 0], b[:, 1], b[:, 2], b[:, 3]
+    cols.append((x + w / 2) / IMAGE_W)
+    cols.append((y + h / 2) / IMAGE_H)
+    cols.append((w * h) / (IMAGE_W * IMAGE_H))
+    cols.append(((x <= 1) | (y <= 1) | (x + w >= IMAGE_W - 1) | (y + h >= IMAGE_H - 1)).astype(float))
+    cols.append(col["spatial_evidence"] * col["support_count"])
+    cols.append(col["spatial_evidence"] * (1.0 - col["uncertainty"]))
+    cols.append(col["mean_evidence"] - col["conflict"])
+    return np.hstack([base, np.column_stack(cols)])
+
+
+def candidates_to_matrix(candidates, use_context: bool = True):
+    """Feature matrix for all candidates of ONE image (what the fusion agent sees at run time)."""
+    import numpy as np
+    base = np.array([candidate_to_features(c) for c in candidates], dtype=float)
+    base = base.reshape(len(candidates), len(FEATURE_NAMES))
+    if not use_context:
+        return base
+    return add_context(base, [c.get("bbox") for c in candidates])

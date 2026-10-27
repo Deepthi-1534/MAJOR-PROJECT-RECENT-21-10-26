@@ -10,9 +10,9 @@
     "spatial_status": "DETECTED",
     "spectral_status": "DETECTED",
     "feature_status": "DETECTED",
-    "spatial_evidence": 0.9781981706619263,
+    "spatial_evidence": 0.9888758063316345,
     "spectral_evidence": 0.7664853473256774,
-    "feature_evidence": 0.8176858425140381,
+    "feature_evidence": 0.7006216645240784,
     "available_agents": [
       "spatial",
       "spectral",
@@ -26,51 +26,48 @@
     ],
     "support_count": 3,
     "agreement": 1.0,
-    "conflict": 0.21171282333624886,
+    "conflict": 0.28825414180755615,
     "conflict_state": "MODERATE",
     "evidence_pattern": "TRIPLE AGREEMENT",
-    "evidence_strength": 0.8541231201672139,
+    "evidence_strength": 0.8186609393937968,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.14587687983278608,
-    "conflict_uncertainty": 0.21171282333624886,
-    "uncertainty": 0.1218645989339891,
-    "confidence": 0.878135401066011,
+    "evidence_uncertainty": 0.1813390606062032,
+    "conflict_uncertainty": 0.28825414180755615,
+    "uncertainty": 0.1590118667847481,
+    "confidence": 0.8409881332152519,
     "reliability": "HIGH",
     "bayes_decision": "CAMOUFLAGED OBJECT",
     "bayes_hypothesis": "H0",
     "bayes_camouflage_detected": true,
-    "bayes_suspicion": 0.6383,
+    "bayes_suspicion": 0.8806,
     "bayes_posterior": {
-      "H0": 0.6383,
-      "H1": 0.3284,
-      "H2": 0.0333
+      "H0": 0.8806,
+      "H1": 0.0597,
+      "H2": 0.0597
     },
-    "bayes_flags": [
-      "WEAK_BAYES_FACTOR"
-    ],
+    "bayes_flags": [],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.3 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.672, P(H1)=0.328, P(H2)=0.000.",
-      "Metacognition flags: ['WEAK_BAYES_FACTOR'].",
-      "Best hypothesis does not clearly beat the runner-up."
+      "Hypothesis test: best=H0, BF over H1 = 13.1 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.881, P(H1)=0.060, P(H2)=0.060.",
+      "Metacognition flags: none."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
   },
   {
     "bbox": [
-      416,
-      96,
-      39,
-      65
+      480,
+      317,
+      32,
+      34
     ],
-    "class": "tarpgray",
+    "class": "net3dgreen",
     "spatial_status": "DETECTED",
     "spectral_status": "NO_DETECTION",
     "feature_status": "DETECTED",
-    "spatial_evidence": 0.9771950840950012,
+    "spatial_evidence": 0.9556478261947632,
     "spectral_evidence": 0.0,
-    "feature_evidence": 0.7123101353645325,
+    "feature_evidence": 0.6468569040298462,
     "available_agents": [
       "spatial",
       "spectral",
@@ -83,36 +80,40 @@
     ],
     "support_count": 2,
     "agreement": 0.6666666666666666,
-    "conflict": 0.9771950840950012,
+    "conflict": 0.9556478261947632,
     "conflict_state": "HIGH",
     "evidence_pattern": "PARTIAL AGREEMENT",
-    "evidence_strength": 0.5631684064865112,
+    "evidence_strength": 0.5341682434082031,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.43683159351348877,
-    "conflict_uncertainty": 0.9771950840950012,
-    "uncertainty": 0.46789116263389585,
-    "confidence": 0.5321088373661041,
+    "evidence_uncertainty": 0.4658317565917969,
+    "conflict_uncertainty": 0.9556478261947632,
+    "uncertainty": 0.4730270504951477,
+    "confidence": 0.5269729495048523,
     "reliability": "MEDIUM",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.331,
+    "bayes_suspicion": 0.4656,
     "bayes_posterior": {
-      "H0": 0.331,
-      "H1": 0.4856,
-      "H2": 0.1833
+      "H0": 0.4656,
+      "H1": 0.2672,
+      "H2": 0.2672
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "SINGLE_AGENT_DOMINATES",
+      "OVERCONFIDENT"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H1, BF over H0 = 3.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.328, P(H1)=0.672, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
-      "Agents disagree strongly (conflict=0.98).",
-      "Only 2/3 agents reported."
+      "Hypothesis test: best=H0, BF over H1 = 209.0 (decisive); consistent with ['H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.995, P(H1)=0.003, P(H2)=0.003.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'SINGLE_AGENT_DOMINATES', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.96).",
+      "Only 2/3 agents reported.",
+      "One agent supplies 88% of the discriminating evidence.",
+      "Belief is extreme despite shaky evidence; tempered."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -120,17 +121,17 @@
   {
     "bbox": [
       352,
-      256,
+      272,
       64,
-      68
+      64
     ],
     "class": "net2dgreen",
     "spatial_status": "DETECTED",
     "spectral_status": "NO_DETECTION",
     "feature_status": "EVIDENCE_PRESENT",
-    "spatial_evidence": 0.9251628518104553,
+    "spatial_evidence": 0.8542408347129822,
     "spectral_evidence": 0.0,
-    "feature_evidence": 0.9795234203338623,
+    "feature_evidence": 0.9919203519821167,
     "available_agents": [
       "spatial",
       "spectral",
@@ -142,57 +143,120 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.9795234203338623,
+    "conflict": 0.9919203519821167,
     "conflict_state": "HIGH",
     "evidence_pattern": "SPATIAL-ONLY EVIDENCE",
-    "evidence_strength": 0.6348954240481058,
+    "evidence_strength": 0.6153870622316996,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.36510457595189416,
-    "conflict_uncertainty": 0.9795234203338623,
-    "uncertainty": 0.4398988564809163,
-    "confidence": 0.5601011435190837,
+    "evidence_uncertainty": 0.3846129377683004,
+    "conflict_uncertainty": 0.9919203519821167,
+    "uncertainty": 0.4514212807019552,
+    "confidence": 0.5485787192980448,
     "reliability": "MEDIUM",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.3829,
+    "bayes_suspicion": 0.4657,
     "bayes_posterior": {
-      "H0": 0.3829,
-      "H1": 0.4004,
-      "H2": 0.2167
+      "H0": 0.4657,
+      "H1": 0.2671,
+      "H2": 0.2671
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION",
-      "NARROW_MARGIN"
+      "SINGLE_AGENT_DOMINATES",
+      "OVERCONFIDENT"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H1, BF over H0 = 1.2 (not decisive); consistent with ['H0'].",
-      "Bayesian posterior: P(H0)=0.475, P(H1)=0.525, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION', 'NARROW_MARGIN'].",
-      "Agents disagree strongly (conflict=0.98).",
+      "Hypothesis test: best=H0, BF over H1 = 288.1 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.995, P(H1)=0.002, P(H2)=0.002.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'SINGLE_AGENT_DOMINATES', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.99).",
       "Only 2/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "One agent supplies 91% of the discriminating evidence.",
+      "Belief is extreme despite shaky evidence; tempered."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
   },
   {
     "bbox": [
-      490.0806884765625,
-      316.520751953125,
-      21.9193115234375,
-      28.151123046875
+      368,
+      400,
+      48,
+      55
     ],
-    "class": "net3dgreen",
+    "class": "personyellow",
+    "spatial_status": "DETECTED",
+    "spectral_status": "NO_DETECTION",
+    "feature_status": "DETECTED",
+    "spatial_evidence": 0.8539918065071106,
+    "spectral_evidence": 0.0,
+    "feature_evidence": 0.6892864108085632,
+    "available_agents": [
+      "spatial",
+      "spectral",
+      "feature"
+    ],
+    "available_count": 3,
+    "supporting_agents": [
+      "spatial",
+      "feature"
+    ],
+    "support_count": 2,
+    "agreement": 0.6666666666666666,
+    "conflict": 0.8539918065071106,
+    "conflict_state": "HIGH",
+    "evidence_pattern": "PARTIAL AGREEMENT",
+    "evidence_strength": 0.514426072438558,
+    "coverage_uncertainty": 0.0,
+    "evidence_uncertainty": 0.485573927561442,
+    "conflict_uncertainty": 0.8539918065071106,
+    "uncertainty": 0.45042711297671,
+    "confidence": 0.54957288702329,
+    "reliability": "MEDIUM",
+    "bayes_decision": "UNCERTAIN - REVIEW",
+    "bayes_hypothesis": null,
+    "bayes_camouflage_detected": false,
+    "bayes_suspicion": 0.4659,
+    "bayes_posterior": {
+      "H0": 0.4659,
+      "H1": 0.2671,
+      "H2": 0.2671
+    },
+    "bayes_flags": [
+      "HIGH_CONFLICT",
+      "MODERATE_UNCERTAINTY",
+      "MISSING_EVIDENCE",
+      "SINGLE_AGENT_DOMINATES",
+      "OVERCONFIDENT"
+    ],
+    "bayes_explanation": [
+      "Hypothesis test: best=H0, BF over H1 = 393.5 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.996, P(H1)=0.002, P(H2)=0.002.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'SINGLE_AGENT_DOMINATES', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.85).",
+      "Only 2/3 agents reported.",
+      "One agent supplies 86% of the discriminating evidence.",
+      "Belief is extreme despite shaky evidence; tempered."
+    ],
+    "rule_decision": "N/A",
+    "rule_confidence": 0.0
+  },
+  {
+    "bbox": [
+      386.8514709472656,
+      10.837254524230957,
+      14.41180419921875,
+      17.3375825881958
+    ],
+    "class": "persongreen",
     "spatial_status": "DETECTED",
     "spectral_status": "NO_DETECTION",
     "feature_status": "NO_DETECTION",
-    "spatial_evidence": 0.9152771830558777,
+    "spatial_evidence": 0.8287472724914551,
     "spectral_evidence": 0.0,
     "feature_evidence": 0.0,
     "available_agents": [
@@ -206,36 +270,99 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.9152771830558777,
+    "conflict": 0.8287472724914551,
     "conflict_state": "HIGH",
     "evidence_pattern": "SPATIAL-ONLY EVIDENCE",
-    "evidence_strength": 0.30509239435195923,
+    "evidence_strength": 0.27624909083048504,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.6949076056480408,
-    "conflict_uncertainty": 0.9152771830558777,
-    "uncertainty": 0.5525461971759795,
-    "confidence": 0.4474538028240205,
+    "evidence_uncertainty": 0.7237509091695149,
+    "conflict_uncertainty": 0.8287472724914551,
+    "uncertainty": 0.5381245454152425,
+    "confidence": 0.46187545458475754,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.3135,
+    "bayes_suspicion": 0.4654,
     "bayes_posterior": {
-      "H0": 0.3135,
-      "H1": 0.4698,
-      "H2": 0.2167
+      "H0": 0.4654,
+      "H1": 0.2673,
+      "H2": 0.2673
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "OVERCONFIDENT"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H1, BF over H0 = 8.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.277, P(H1)=0.723, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
-      "Agents disagree strongly (conflict=0.92).",
-      "Only 1/3 agents reported."
+      "Hypothesis test: best=H0, BF over H1 = 301.9 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.994, P(H1)=0.003, P(H2)=0.003.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.83).",
+      "Only 1/3 agents reported.",
+      "Belief is extreme despite shaky evidence; tempered."
+    ],
+    "rule_decision": "N/A",
+    "rule_confidence": 0.0
+  },
+  {
+    "bbox": [
+      423.9484558105469,
+      114.34908294677734,
+      32.80645751953125,
+      47.52935028076172
+    ],
+    "class": "tarpgray",
+    "spatial_status": "DETECTED",
+    "spectral_status": "NO_DETECTION",
+    "feature_status": "NO_DETECTION",
+    "spatial_evidence": 0.8047630786895752,
+    "spectral_evidence": 0.0,
+    "feature_evidence": 0.0,
+    "available_agents": [
+      "spatial",
+      "spectral",
+      "feature"
+    ],
+    "available_count": 3,
+    "supporting_agents": [
+      "spatial"
+    ],
+    "support_count": 1,
+    "agreement": 0.3333333333333333,
+    "conflict": 0.8047630786895752,
+    "conflict_state": "HIGH",
+    "evidence_pattern": "SPATIAL-ONLY EVIDENCE",
+    "evidence_strength": 0.2682543595631917,
+    "coverage_uncertainty": 0.0,
+    "evidence_uncertainty": 0.7317456404368083,
+    "conflict_uncertainty": 0.8047630786895752,
+    "uncertainty": 0.5341271797815959,
+    "confidence": 0.46587282021840415,
+    "reliability": "LOW",
+    "bayes_decision": "UNCERTAIN - REVIEW",
+    "bayes_hypothesis": null,
+    "bayes_camouflage_detected": false,
+    "bayes_suspicion": 0.4654,
+    "bayes_posterior": {
+      "H0": 0.4654,
+      "H1": 0.2673,
+      "H2": 0.2673
+    },
+    "bayes_flags": [
+      "HIGH_CONFLICT",
+      "MODERATE_UNCERTAINTY",
+      "MISSING_EVIDENCE",
+      "OVERCONFIDENT"
+    ],
+    "bayes_explanation": [
+      "Hypothesis test: best=H0, BF over H1 = 307.7 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.994, P(H1)=0.003, P(H2)=0.003.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.80).",
+      "Only 1/3 agents reported.",
+      "Belief is extreme despite shaky evidence; tempered."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -251,7 +378,7 @@
     "spatial_status": "DETECTED",
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
-    "spatial_evidence": 0.8296374082565308,
+    "spatial_evidence": 0.7903900742530823,
     "spectral_evidence": 0.7659989053308864,
     "feature_evidence": 0.0,
     "available_agents": [
@@ -266,57 +393,118 @@
     ],
     "support_count": 2,
     "agreement": 0.6666666666666666,
-    "conflict": 0.8296374082565308,
+    "conflict": 0.7903900742530823,
     "conflict_state": "HIGH",
     "evidence_pattern": "PARTIAL AGREEMENT",
-    "evidence_strength": 0.5318787711958057,
+    "evidence_strength": 0.5187963265279896,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.46812122880419427,
-    "conflict_uncertainty": 0.8296374082565308,
-    "uncertainty": 0.43613971399863694,
-    "confidence": 0.5638602860013631,
+    "evidence_uncertainty": 0.48120367347201043,
+    "conflict_uncertainty": 0.7903900742530823,
+    "uncertainty": 0.42959849166472885,
+    "confidence": 0.5704015083352711,
     "reliability": "MEDIUM",
-    "bayes_decision": "UNCERTAIN - REVIEW",
-    "bayes_hypothesis": null,
-    "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.3858,
+    "bayes_decision": "CAMOUFLAGED OBJECT",
+    "bayes_hypothesis": "H0",
+    "bayes_camouflage_detected": true,
+    "bayes_suspicion": 0.5138,
     "bayes_posterior": {
-      "H0": 0.3858,
-      "H1": 0.3976,
-      "H2": 0.2167
+      "H0": 0.5138,
+      "H1": 0.2431,
+      "H2": 0.2431
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION",
-      "NARROW_MARGIN"
+      "SINGLE_AGENT_DOMINATES"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H1, BF over H0 = 1.1 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.483, P(H1)=0.517, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION', 'NARROW_MARGIN'].",
-      "Agents disagree strongly (conflict=0.83).",
+      "Hypothesis test: best=H0, BF over H1 = 9.8 (decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.849, P(H1)=0.076, P(H2)=0.076.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'SINGLE_AGENT_DOMINATES'].",
+      "Agents disagree strongly (conflict=0.79).",
       "Only 2/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "One agent supplies 93% of the discriminating evidence."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
   },
   {
     "bbox": [
-      391.77459716796875,
-      10.614964485168457,
-      10.4130859375,
-      16.10076141357422
+      416,
+      112,
+      48,
+      48
+    ],
+    "class": "tarpgray",
+    "spatial_status": "DETECTED",
+    "spectral_status": "NO_DETECTION",
+    "feature_status": "DETECTED",
+    "spatial_evidence": 0.27934232354164124,
+    "spectral_evidence": 0.0,
+    "feature_evidence": 0.6467780470848083,
+    "available_agents": [
+      "spatial",
+      "spectral",
+      "feature"
+    ],
+    "available_count": 3,
+    "supporting_agents": [
+      "spatial",
+      "feature"
+    ],
+    "support_count": 2,
+    "agreement": 0.6666666666666666,
+    "conflict": 0.6467780470848083,
+    "conflict_state": "HIGH",
+    "evidence_pattern": "PARTIAL AGREEMENT",
+    "evidence_strength": 0.30870679020881653,
+    "coverage_uncertainty": 0.0,
+    "evidence_uncertainty": 0.6912932097911835,
+    "conflict_uncertainty": 0.6467780470848083,
+    "uncertainty": 0.4705506980419159,
+    "confidence": 0.5294493019580842,
+    "reliability": "MEDIUM",
+    "bayes_decision": "UNCERTAIN - REVIEW",
+    "bayes_hypothesis": null,
+    "bayes_camouflage_detected": false,
+    "bayes_suspicion": 0.3996,
+    "bayes_posterior": {
+      "H0": 0.3996,
+      "H1": 0.3002,
+      "H2": 0.3002
+    },
+    "bayes_flags": [
+      "HIGH_CONFLICT",
+      "MODERATE_UNCERTAINTY",
+      "MISSING_EVIDENCE",
+      "NO_HYPOTHESIS_FITS",
+      "OVERCONFIDENT"
+    ],
+    "bayes_explanation": [
+      "Hypothesis test: best=H0, BF over H1 = 427.1 (decisive); consistent with none.",
+      "Bayesian posterior: P(H0)=0.996, P(H1)=0.002, P(H2)=0.002.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'NO_HYPOTHESIS_FITS', 'OVERCONFIDENT'].",
+      "Agents disagree strongly (conflict=0.65).",
+      "Only 2/3 agents reported.",
+      "Evidence is inconsistent with all three hypotheses (possible novel case).",
+      "Belief is extreme despite shaky evidence; tempered."
+    ],
+    "rule_decision": "N/A",
+    "rule_confidence": 0.0
+  },
+  {
+    "bbox": [
+      201.55596923828125,
+      379.2770080566406,
+      13.414993286132812,
+      8.09326171875
     ],
     "class": "persongreen",
     "spatial_status": "DETECTED",
     "spectral_status": "NO_DETECTION",
     "feature_status": "NO_DETECTION",
-    "spatial_evidence": 0.672290563583374,
+    "spatial_evidence": 0.15222647786140442,
     "spectral_evidence": 0.0,
     "feature_evidence": 0.0,
     "available_agents": [
@@ -330,163 +518,37 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.672290563583374,
-    "conflict_state": "HIGH",
+    "conflict": 0.15222647786140442,
+    "conflict_state": "LOW",
     "evidence_pattern": "SPATIAL-ONLY EVIDENCE",
-    "evidence_strength": 0.22409685452779135,
+    "evidence_strength": 0.050742159287134804,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7759031454722086,
-    "conflict_uncertainty": 0.672290563583374,
-    "uncertainty": 0.5120484272638957,
-    "confidence": 0.48795157273610434,
-    "reliability": "LOW",
+    "evidence_uncertainty": 0.9492578407128652,
+    "conflict_uncertainty": 0.15222647786140442,
+    "uncertainty": 0.42537107964356746,
+    "confidence": 0.5746289203564325,
+    "reliability": "MEDIUM",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.396,
+    "bayes_suspicion": 0.5653,
     "bayes_posterior": {
-      "H0": 0.396,
-      "H1": 0.3538,
-      "H2": 0.2501
+      "H0": 0.5653,
+      "H1": 0.2174,
+      "H2": 0.2174
     },
     "bayes_flags": [
-      "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NO_HYPOTHESIS_FITS",
+      "OVERCONFIDENT"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.0 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.584, P(H1)=0.415, P(H2)=0.001.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
-      "Agents disagree strongly (conflict=0.67).",
+      "Hypothesis test: best=H0, BF over H1 = 690.3 (decisive); consistent with none.",
+      "Bayesian posterior: P(H0)=0.996, P(H1)=0.002, P(H2)=0.002.",
+      "Metacognition flags: ['MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'NO_HYPOTHESIS_FITS', 'OVERCONFIDENT'].",
       "Only 1/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
-    ],
-    "rule_decision": "N/A",
-    "rule_confidence": 0.0
-  },
-  {
-    "bbox": [
-      383,
-      416,
-      32,
-      38
-    ],
-    "class": "personyellow",
-    "spatial_status": "DETECTED",
-    "spectral_status": "NO_DETECTION",
-    "feature_status": "DETECTED",
-    "spatial_evidence": 0.4332680404186249,
-    "spectral_evidence": 0.0,
-    "feature_evidence": 0.7400978803634644,
-    "available_agents": [
-      "spatial",
-      "spectral",
-      "feature"
-    ],
-    "available_count": 3,
-    "supporting_agents": [
-      "spatial",
-      "feature"
-    ],
-    "support_count": 2,
-    "agreement": 0.6666666666666666,
-    "conflict": 0.7400978803634644,
-    "conflict_state": "HIGH",
-    "evidence_pattern": "PARTIAL AGREEMENT",
-    "evidence_strength": 0.3911219735940297,
-    "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.6088780264059703,
-    "conflict_uncertainty": 0.7400978803634644,
-    "uncertainty": 0.46558057467142744,
-    "confidence": 0.5344194253285726,
-    "reliability": "MEDIUM",
-    "bayes_decision": "CAMOUFLAGED OBJECT",
-    "bayes_hypothesis": "H0",
-    "bayes_camouflage_detected": true,
-    "bayes_suspicion": 0.5307,
-    "bayes_posterior": {
-      "H0": 0.5307,
-      "H1": 0.236,
-      "H2": 0.2333
-    },
-    "bayes_flags": [
-      "HIGH_CONFLICT",
-      "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE",
-      "OVERCONFIDENT"
-    ],
-    "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 6808.2 (decisive); consistent with ['H0'].",
-      "Bayesian posterior: P(H0)=0.991, P(H1)=0.009, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'OVERCONFIDENT'].",
-      "Agents disagree strongly (conflict=0.74).",
-      "Only 2/3 agents reported.",
-      "Belief is extreme despite shaky evidence; tempered."
-    ],
-    "rule_decision": "N/A",
-    "rule_confidence": 0.0
-  },
-  {
-    "bbox": [
-      218,
-      160,
-      9,
-      10
-    ],
-    "class": "net3dgray",
-    "spatial_status": "DETECTED",
-    "spectral_status": "DETECTED",
-    "feature_status": "NO_DETECTION",
-    "spatial_evidence": 0.33516570925712585,
-    "spectral_evidence": 0.7895522307854832,
-    "feature_evidence": 0.0,
-    "available_agents": [
-      "spatial",
-      "spectral",
-      "feature"
-    ],
-    "available_count": 3,
-    "supporting_agents": [
-      "spatial",
-      "spectral"
-    ],
-    "support_count": 2,
-    "agreement": 0.6666666666666666,
-    "conflict": 0.7895522307854832,
-    "conflict_state": "HIGH",
-    "evidence_pattern": "PARTIAL AGREEMENT",
-    "evidence_strength": 0.374905980014203,
-    "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.6250940199857971,
-    "conflict_uncertainty": 0.7895522307854832,
-    "uncertainty": 0.4869032772299638,
-    "confidence": 0.5130967227700363,
-    "reliability": "MEDIUM",
-    "bayes_decision": "CAMOUFLAGED OBJECT",
-    "bayes_hypothesis": "H0",
-    "bayes_camouflage_detected": true,
-    "bayes_suspicion": 0.5331,
-    "bayes_posterior": {
-      "H0": 0.5331,
-      "H1": 0.2336,
-      "H2": 0.2333
-    },
-    "bayes_flags": [
-      "HIGH_CONFLICT",
-      "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE",
-      "OVERCONFIDENT"
-    ],
-    "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 870447.4 (decisive); consistent with ['H0'].",
-      "Bayesian posterior: P(H0)=0.999, P(H1)=0.001, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'OVERCONFIDENT'].",
-      "Agents disagree strongly (conflict=0.79).",
-      "Only 2/3 agents reported.",
+      "Evidence is inconsistent with all three hypotheses (possible novel case).",
       "Belief is extreme despite shaky evidence; tempered."
     ],
     "rule_decision": "N/A",
@@ -504,7 +566,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.8168899039558061,
+    "spectral_evidence": 0.816889903955806,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -517,36 +579,40 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.8168899039558061,
+    "conflict": 0.816889903955806,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.2722966346519354,
+    "evidence_strength": 0.2722966346519353,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7277033653480647,
-    "conflict_uncertainty": 0.8168899039558061,
+    "conflict_uncertainty": 0.816889903955806,
     "uncertainty": 0.5361483173259677,
     "confidence": 0.4638516826740323,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4632,
+    "bayes_suspicion": 0.278,
     "bayes_posterior": {
-      "H0": 0.4632,
-      "H1": 0.3202,
-      "H2": 0.2167
+      "H0": 0.278,
+      "H1": 0.361,
+      "H2": 0.361
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "HIGH_ENTROPY",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 6.5 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.704, P(H1)=0.296, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0'].",
+      "Bayesian posterior: P(H0)=0.112, P(H1)=0.444, P(H2)=0.444.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'HIGH_ENTROPY', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.82).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -589,23 +655,27 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4624,
+    "bayes_suspicion": 0.2754,
     "bayes_posterior": {
-      "H0": 0.4624,
-      "H1": 0.3209,
-      "H2": 0.2167
+      "H0": 0.2754,
+      "H1": 0.3623,
+      "H2": 0.3623
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "HIGH_ENTROPY",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 6.3 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.702, P(H1)=0.298, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0'].",
+      "Bayesian posterior: P(H0)=0.102, P(H1)=0.449, P(H2)=0.449.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'HIGH_ENTROPY', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.81).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -622,7 +692,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.8046478318916821,
+    "spectral_evidence": 0.8046478318916822,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -635,36 +705,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.8046478318916821,
+    "conflict": 0.8046478318916822,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.26821594396389403,
+    "evidence_strength": 0.2682159439638941,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.731784056036106,
-    "conflict_uncertainty": 0.8046478318916821,
+    "conflict_uncertainty": 0.8046478318916822,
     "uncertainty": 0.534107971981947,
     "confidence": 0.46589202801805296,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4608,
+    "bayes_suspicion": 0.2711,
     "bayes_posterior": {
-      "H0": 0.4608,
-      "H1": 0.3225,
-      "H2": 0.2167
+      "H0": 0.2711,
+      "H1": 0.3645,
+      "H2": 0.3645
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 6.0 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.698, P(H1)=0.302, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.084, P(H1)=0.458, P(H2)=0.458.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.80).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -681,7 +754,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7918445318298254,
+    "spectral_evidence": 0.7918445318298255,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -694,36 +767,101 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7918445318298254,
+    "conflict": 0.7918445318298255,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.26394817727660846,
+    "evidence_strength": 0.2639481772766085,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7360518227233915,
-    "conflict_uncertainty": 0.7918445318298254,
+    "evidence_uncertainty": 0.7360518227233914,
+    "conflict_uncertainty": 0.7918445318298255,
     "uncertainty": 0.5319740886383042,
     "confidence": 0.4680259113616958,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4582,
+    "bayes_suspicion": 0.2661,
     "bayes_posterior": {
-      "H0": 0.4582,
-      "H1": 0.3252,
-      "H2": 0.2167
+      "H0": 0.2661,
+      "H1": 0.3669,
+      "H2": 0.3669
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 5.5 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.690, P(H1)=0.310, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.065, P(H1)=0.468, P(H2)=0.468.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.79).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
+    ],
+    "rule_decision": "N/A",
+    "rule_confidence": 0.0
+  },
+  {
+    "bbox": [
+      218,
+      161,
+      9,
+      8
+    ],
+    "class": "unknown",
+    "spatial_status": "NO_DETECTION",
+    "spectral_status": "DETECTED",
+    "feature_status": "NO_DETECTION",
+    "spatial_evidence": 0.0,
+    "spectral_evidence": 0.7895522307854832,
+    "feature_evidence": 0.0,
+    "available_agents": [
+      "spatial",
+      "spectral",
+      "feature"
+    ],
+    "available_count": 3,
+    "supporting_agents": [
+      "spectral"
+    ],
+    "support_count": 1,
+    "agreement": 0.3333333333333333,
+    "conflict": 0.7895522307854832,
+    "conflict_state": "HIGH",
+    "evidence_pattern": "THERMAL-ONLY EVIDENCE",
+    "evidence_strength": 0.2631840769284944,
+    "coverage_uncertainty": 0.0,
+    "evidence_uncertainty": 0.7368159230715057,
+    "conflict_uncertainty": 0.7895522307854832,
+    "uncertainty": 0.5315920384642472,
+    "confidence": 0.4684079615357528,
+    "reliability": "LOW",
+    "bayes_decision": "UNCERTAIN - REVIEW",
+    "bayes_hypothesis": null,
+    "bayes_camouflage_detected": false,
+    "bayes_suspicion": 0.2654,
+    "bayes_posterior": {
+      "H0": 0.2654,
+      "H1": 0.3673,
+      "H2": 0.3673
+    },
+    "bayes_flags": [
+      "HIGH_CONFLICT",
+      "MODERATE_UNCERTAINTY",
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
+    ],
+    "bayes_explanation": [
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.062, P(H1)=0.469, P(H2)=0.469.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
+      "Agents disagree strongly (conflict=0.79).",
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -766,23 +904,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4556,
+    "bayes_suspicion": 0.263,
     "bayes_posterior": {
-      "H0": 0.4556,
-      "H1": 0.3277,
-      "H2": 0.2167
+      "H0": 0.263,
+      "H1": 0.3685,
+      "H2": 0.3685
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 5.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.683, P(H1)=0.317, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.052, P(H1)=0.474, P(H2)=0.474.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.78).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -825,23 +966,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4553,
+    "bayes_suspicion": 0.2628,
     "bayes_posterior": {
-      "H0": 0.4553,
-      "H1": 0.328,
-      "H2": 0.2167
+      "H0": 0.2628,
+      "H1": 0.3686,
+      "H2": 0.3686
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 5.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.682, P(H1)=0.318, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.051, P(H1)=0.474, P(H2)=0.474.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.78).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -884,23 +1028,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4536,
+    "bayes_suspicion": 0.2613,
     "bayes_posterior": {
-      "H0": 0.4536,
-      "H1": 0.3297,
-      "H2": 0.2167
+      "H0": 0.2613,
+      "H1": 0.3693,
+      "H2": 0.3693
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.677, P(H1)=0.323, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.045, P(H1)=0.477, P(H2)=0.477.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.77).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -943,23 +1090,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4533,
+    "bayes_suspicion": 0.2612,
     "bayes_posterior": {
-      "H0": 0.4533,
-      "H1": 0.33,
-      "H2": 0.2167
+      "H0": 0.2612,
+      "H1": 0.3694,
+      "H2": 0.3694
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.676, P(H1)=0.324, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.045, P(H1)=0.478, P(H2)=0.478.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.77).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1002,23 +1152,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4532,
+    "bayes_suspicion": 0.2611,
     "bayes_posterior": {
-      "H0": 0.4532,
-      "H1": 0.3301,
-      "H2": 0.2167
+      "H0": 0.2611,
+      "H1": 0.3694,
+      "H2": 0.3694
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.676, P(H1)=0.324, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.044, P(H1)=0.478, P(H2)=0.478.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.77).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1061,23 +1214,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.453,
+    "bayes_suspicion": 0.261,
     "bayes_posterior": {
-      "H0": 0.453,
-      "H1": 0.3303,
-      "H2": 0.2167
+      "H0": 0.261,
+      "H1": 0.3695,
+      "H2": 0.3695
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.7 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.675, P(H1)=0.325, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.044, P(H1)=0.478, P(H2)=0.478.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.77).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1120,23 +1276,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4521,
+    "bayes_suspicion": 0.2604,
     "bayes_posterior": {
-      "H0": 0.4521,
-      "H1": 0.3312,
-      "H2": 0.2167
+      "H0": 0.2604,
+      "H1": 0.3698,
+      "H2": 0.3698
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.673, P(H1)=0.327, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.042, P(H1)=0.479, P(H2)=0.479.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.77).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1179,23 +1338,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4507,
+    "bayes_suspicion": 0.2597,
     "bayes_posterior": {
-      "H0": 0.4507,
-      "H1": 0.3326,
-      "H2": 0.2167
+      "H0": 0.2597,
+      "H1": 0.3702,
+      "H2": 0.3702
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.4 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.669, P(H1)=0.331, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.039, P(H1)=0.481, P(H2)=0.481.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1238,23 +1400,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4506,
+    "bayes_suspicion": 0.2596,
     "bayes_posterior": {
-      "H0": 0.4506,
-      "H1": 0.3328,
-      "H2": 0.2167
+      "H0": 0.2596,
+      "H1": 0.3702,
+      "H2": 0.3702
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.4 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.668, P(H1)=0.332, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.038, P(H1)=0.481, P(H2)=0.481.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1297,23 +1462,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4504,
+    "bayes_suspicion": 0.2596,
     "bayes_posterior": {
-      "H0": 0.4504,
-      "H1": 0.3329,
-      "H2": 0.2167
+      "H0": 0.2596,
+      "H1": 0.3702,
+      "H2": 0.3702
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.4 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.668, P(H1)=0.332, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.038, P(H1)=0.481, P(H2)=0.481.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1356,23 +1524,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4503,
+    "bayes_suspicion": 0.2595,
     "bayes_posterior": {
-      "H0": 0.4503,
-      "H1": 0.333,
-      "H2": 0.2167
+      "H0": 0.2595,
+      "H1": 0.3703,
+      "H2": 0.3703
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.4 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.668, P(H1)=0.332, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.038, P(H1)=0.481, P(H2)=0.481.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1389,7 +1560,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7560105821910224,
+    "spectral_evidence": 0.7560105821910225,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1402,36 +1573,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7560105821910224,
+    "conflict": 0.7560105821910225,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.25200352739700743,
+    "evidence_strength": 0.2520035273970075,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7479964726029926,
-    "conflict_uncertainty": 0.7560105821910224,
+    "evidence_uncertainty": 0.7479964726029925,
+    "conflict_uncertainty": 0.7560105821910225,
     "uncertainty": 0.5260017636985037,
     "confidence": 0.4739982363014963,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4498,
+    "bayes_suspicion": 0.2593,
     "bayes_posterior": {
-      "H0": 0.4498,
-      "H1": 0.3335,
-      "H2": 0.2167
+      "H0": 0.2593,
+      "H1": 0.3704,
+      "H2": 0.3704
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.3 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.666, P(H1)=0.334, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.037, P(H1)=0.481, P(H2)=0.481.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1474,23 +1648,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4497,
+    "bayes_suspicion": 0.2592,
     "bayes_posterior": {
-      "H0": 0.4497,
-      "H1": 0.3337,
-      "H2": 0.2167
+      "H0": 0.2592,
+      "H1": 0.3704,
+      "H2": 0.3704
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.3 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.666, P(H1)=0.334, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.037, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.76).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1533,23 +1710,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4494,
+    "bayes_suspicion": 0.2591,
     "bayes_posterior": {
-      "H0": 0.4494,
-      "H1": 0.3339,
-      "H2": 0.2167
+      "H0": 0.2591,
+      "H1": 0.3704,
+      "H2": 0.3704
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.665, P(H1)=0.335, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.037, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1566,7 +1746,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7542013171441674,
+    "spectral_evidence": 0.7542013171441675,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1579,36 +1759,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7542013171441674,
+    "conflict": 0.7542013171441675,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
     "evidence_strength": 0.2514004390480558,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7485995609519442,
-    "conflict_uncertainty": 0.7542013171441674,
+    "conflict_uncertainty": 0.7542013171441675,
     "uncertainty": 0.5257002195240279,
     "confidence": 0.4742997804759721,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4493,
+    "bayes_suspicion": 0.2591,
     "bayes_posterior": {
-      "H0": 0.4493,
-      "H1": 0.334,
-      "H2": 0.2167
+      "H0": 0.2591,
+      "H1": 0.3704,
+      "H2": 0.3704
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.665, P(H1)=0.335, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.036, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1651,23 +1834,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4492,
+    "bayes_suspicion": 0.2591,
     "bayes_posterior": {
-      "H0": 0.4492,
-      "H1": 0.3341,
-      "H2": 0.2167
+      "H0": 0.2591,
+      "H1": 0.3705,
+      "H2": 0.3705
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.664, P(H1)=0.335, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.036, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1684,7 +1870,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7527257210316934,
+    "spectral_evidence": 0.7527257210316936,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1697,36 +1883,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7527257210316934,
+    "conflict": 0.7527257210316936,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.25090857367723113,
+    "evidence_strength": 0.2509085736772312,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7490914263227688,
-    "conflict_uncertainty": 0.7527257210316934,
+    "conflict_uncertainty": 0.7527257210316936,
     "uncertainty": 0.5254542868386156,
     "confidence": 0.4745457131613844,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.449,
+    "bayes_suspicion": 0.259,
     "bayes_posterior": {
-      "H0": 0.449,
-      "H1": 0.3343,
-      "H2": 0.2167
+      "H0": 0.259,
+      "H1": 0.3705,
+      "H2": 0.3705
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.664, P(H1)=0.336, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.036, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1769,23 +1958,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4485,
+    "bayes_suspicion": 0.2588,
     "bayes_posterior": {
-      "H0": 0.4485,
-      "H1": 0.3348,
-      "H2": 0.2167
+      "H0": 0.2588,
+      "H1": 0.3706,
+      "H2": 0.3706
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.662, P(H1)=0.337, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.035, P(H1)=0.482, P(H2)=0.482.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1802,7 +1994,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7497104381585412,
+    "spectral_evidence": 0.749710438158541,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1815,36 +2007,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7497104381585412,
+    "conflict": 0.749710438158541,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.2499034793861804,
+    "evidence_strength": 0.24990347938618032,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7500965206138196,
-    "conflict_uncertainty": 0.7497104381585412,
-    "uncertainty": 0.5249517396930903,
-    "confidence": 0.4750482603069097,
+    "evidence_uncertainty": 0.7500965206138197,
+    "conflict_uncertainty": 0.749710438158541,
+    "uncertainty": 0.5249517396930902,
+    "confidence": 0.47504826030690983,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4482,
+    "bayes_suspicion": 0.2587,
     "bayes_posterior": {
-      "H0": 0.4482,
-      "H1": 0.3351,
-      "H2": 0.2167
+      "H0": 0.2587,
+      "H1": 0.3707,
+      "H2": 0.3707
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.661, P(H1)=0.338, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.035, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1887,23 +2082,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4481,
+    "bayes_suspicion": 0.2587,
     "bayes_posterior": {
-      "H0": 0.4481,
-      "H1": 0.3352,
-      "H2": 0.2167
+      "H0": 0.2587,
+      "H1": 0.3707,
+      "H2": 0.3707
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.661, P(H1)=0.339, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.035, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1920,7 +2118,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.747606969778145,
+    "spectral_evidence": 0.7476069697781452,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1933,36 +2131,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.747606969778145,
+    "conflict": 0.7476069697781452,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24920232325938166,
+    "evidence_strength": 0.24920232325938174,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7507976767406184,
-    "conflict_uncertainty": 0.747606969778145,
+    "evidence_uncertainty": 0.7507976767406183,
+    "conflict_uncertainty": 0.7476069697781452,
     "uncertainty": 0.5246011616296908,
     "confidence": 0.47539883837030916,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4476,
+    "bayes_suspicion": 0.2585,
     "bayes_posterior": {
-      "H0": 0.4476,
-      "H1": 0.3357,
-      "H2": 0.2167
+      "H0": 0.2585,
+      "H1": 0.3707,
+      "H2": 0.3707
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.0 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.660, P(H1)=0.340, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.034, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -1979,7 +2180,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7466054117531482,
+    "spectral_evidence": 0.7466054117531484,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -1992,36 +2193,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7466054117531482,
+    "conflict": 0.7466054117531484,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24886847058438274,
+    "evidence_strength": 0.2488684705843828,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7511315294156172,
-    "conflict_uncertainty": 0.7466054117531482,
-    "uncertainty": 0.5244342352921914,
-    "confidence": 0.47556576470780865,
+    "conflict_uncertainty": 0.7466054117531484,
+    "uncertainty": 0.5244342352921915,
+    "confidence": 0.47556576470780854,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4474,
+    "bayes_suspicion": 0.2585,
     "bayes_posterior": {
-      "H0": 0.4474,
-      "H1": 0.3359,
-      "H2": 0.2167
+      "H0": 0.2585,
+      "H1": 0.3708,
+      "H2": 0.3708
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 4.0 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.659, P(H1)=0.341, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.034, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.75).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2064,23 +2268,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4468,
+    "bayes_suspicion": 0.2583,
     "bayes_posterior": {
-      "H0": 0.4468,
-      "H1": 0.3365,
-      "H2": 0.2167
+      "H0": 0.2583,
+      "H1": 0.3708,
+      "H2": 0.3708
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.9 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.658, P(H1)=0.342, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.033, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2097,7 +2304,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7393380221282413,
+    "spectral_evidence": 0.7393380221282414,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2110,36 +2317,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7393380221282413,
+    "conflict": 0.7393380221282414,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24644600737608044,
+    "evidence_strength": 0.24644600737608047,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7535539926239195,
-    "conflict_uncertainty": 0.7393380221282413,
-    "uncertainty": 0.5232230036880402,
-    "confidence": 0.4767769963119598,
+    "conflict_uncertainty": 0.7393380221282414,
+    "uncertainty": 0.5232230036880403,
+    "confidence": 0.4767769963119597,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4454,
+    "bayes_suspicion": 0.258,
     "bayes_posterior": {
-      "H0": 0.4454,
-      "H1": 0.3379,
-      "H2": 0.2167
+      "H0": 0.258,
+      "H1": 0.371,
+      "H2": 0.371
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.654, P(H1)=0.346, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.032, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2156,7 +2366,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7387074999546944,
+    "spectral_evidence": 0.7387074999546945,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2169,36 +2379,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7387074999546944,
+    "conflict": 0.7387074999546945,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24623583331823148,
+    "evidence_strength": 0.2462358333182315,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7537641666817685,
-    "conflict_uncertainty": 0.7387074999546944,
+    "conflict_uncertainty": 0.7387074999546945,
     "uncertainty": 0.5231179166591158,
     "confidence": 0.4768820833408842,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4452,
+    "bayes_suspicion": 0.258,
     "bayes_posterior": {
-      "H0": 0.4452,
-      "H1": 0.3381,
-      "H2": 0.2167
+      "H0": 0.258,
+      "H1": 0.371,
+      "H2": 0.371
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.653, P(H1)=0.347, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.032, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2241,23 +2454,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4452,
+    "bayes_suspicion": 0.258,
     "bayes_posterior": {
-      "H0": 0.4452,
-      "H1": 0.3381,
-      "H2": 0.2167
+      "H0": 0.258,
+      "H1": 0.371,
+      "H2": 0.371
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.8 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.653, P(H1)=0.347, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.032, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2300,23 +2516,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4448,
+    "bayes_suspicion": 0.2579,
     "bayes_posterior": {
-      "H0": 0.4448,
-      "H1": 0.3385,
-      "H2": 0.2167
+      "H0": 0.2579,
+      "H1": 0.3711,
+      "H2": 0.3711
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.7 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.652, P(H1)=0.348, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.032, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2359,23 +2578,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4448,
+    "bayes_suspicion": 0.2579,
     "bayes_posterior": {
-      "H0": 0.4448,
-      "H1": 0.3385,
-      "H2": 0.2167
+      "H0": 0.2579,
+      "H1": 0.3711,
+      "H2": 0.3711
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.7 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.652, P(H1)=0.348, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.032, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2418,23 +2640,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4448,
+    "bayes_suspicion": 0.2579,
     "bayes_posterior": {
-      "H0": 0.4448,
-      "H1": 0.3385,
-      "H2": 0.2167
+      "H0": 0.2579,
+      "H1": 0.3711,
+      "H2": 0.3711
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
-      "MISSING_EVIDENCE"
+      "MISSING_EVIDENCE",
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.7 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.652, P(H1)=0.348, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.031, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.74).",
-      "Only 1/3 agents reported."
+      "Only 1/3 agents reported.",
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2477,25 +2702,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.444,
+    "bayes_suspicion": 0.2578,
     "bayes_posterior": {
-      "H0": 0.444,
-      "H1": 0.3393,
-      "H2": 0.2167
+      "H0": 0.2578,
+      "H1": 0.3711,
+      "H2": 0.3711
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.650, P(H1)=0.350, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.031, P(H1)=0.484, P(H2)=0.484.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2538,25 +2764,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4439,
+    "bayes_suspicion": 0.2577,
     "bayes_posterior": {
-      "H0": 0.4439,
-      "H1": 0.3394,
-      "H2": 0.2167
+      "H0": 0.2577,
+      "H1": 0.3711,
+      "H2": 0.3711
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.649, P(H1)=0.351, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.031, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2573,7 +2800,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7328069673014772,
+    "spectral_evidence": 0.7328069673014774,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2586,38 +2813,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7328069673014772,
+    "conflict": 0.7328069673014774,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.2442689891004924,
+    "evidence_strength": 0.24426898910049247,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7557310108995076,
-    "conflict_uncertainty": 0.7328069673014772,
-    "uncertainty": 0.5221344945502462,
-    "confidence": 0.4778655054497538,
+    "conflict_uncertainty": 0.7328069673014774,
+    "uncertainty": 0.5221344945502463,
+    "confidence": 0.4778655054497537,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4436,
+    "bayes_suspicion": 0.2577,
     "bayes_posterior": {
-      "H0": 0.4436,
-      "H1": 0.3397,
-      "H2": 0.2167
+      "H0": 0.2577,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.648, P(H1)=0.352, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.031, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2660,25 +2888,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4433,
+    "bayes_suspicion": 0.2577,
     "bayes_posterior": {
-      "H0": 0.4433,
-      "H1": 0.34,
-      "H2": 0.2167
+      "H0": 0.2577,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.6 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.648, P(H1)=0.352, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.031, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2695,7 +2924,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7303305412662857,
+    "spectral_evidence": 0.7303305412662856,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2708,38 +2937,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7303305412662857,
+    "conflict": 0.7303305412662856,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24344351375542858,
+    "evidence_strength": 0.24344351375542853,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7565564862445714,
-    "conflict_uncertainty": 0.7303305412662857,
+    "evidence_uncertainty": 0.7565564862445715,
+    "conflict_uncertainty": 0.7303305412662856,
     "uncertainty": 0.5217217568777143,
     "confidence": 0.47827824312228573,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4429,
+    "bayes_suspicion": 0.2576,
     "bayes_posterior": {
-      "H0": 0.4429,
-      "H1": 0.3404,
-      "H2": 0.2167
+      "H0": 0.2576,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.5 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.646, P(H1)=0.354, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2782,25 +3012,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4427,
+    "bayes_suspicion": 0.2576,
     "bayes_posterior": {
-      "H0": 0.4427,
-      "H1": 0.3405,
-      "H2": 0.2167
+      "H0": 0.2576,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.5 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.646, P(H1)=0.354, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2843,25 +3074,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4423,
+    "bayes_suspicion": 0.2575,
     "bayes_posterior": {
-      "H0": 0.4423,
-      "H1": 0.341,
-      "H2": 0.2167
+      "H0": 0.2575,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.5 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.645, P(H1)=0.355, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2878,7 +3110,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.727272509469538,
+    "spectral_evidence": 0.7272725094695379,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2891,38 +3123,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.727272509469538,
+    "conflict": 0.7272725094695379,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.24242416982317935,
+    "evidence_strength": 0.2424241698231793,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7575758301768206,
-    "conflict_uncertainty": 0.727272509469538,
+    "evidence_uncertainty": 0.7575758301768207,
+    "conflict_uncertainty": 0.7272725094695379,
     "uncertainty": 0.5212120849115897,
     "confidence": 0.47878791508841034,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.442,
+    "bayes_suspicion": 0.2575,
     "bayes_posterior": {
-      "H0": 0.442,
-      "H1": 0.3413,
-      "H2": 0.2167
+      "H0": 0.2575,
+      "H1": 0.3712,
+      "H2": 0.3712
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.4 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.644, P(H1)=0.356, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.73).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -2939,7 +3172,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.719542547509612,
+    "spectral_evidence": 0.7195425475096122,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -2952,38 +3185,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.719542547509612,
+    "conflict": 0.7195425475096122,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.23984751583653732,
+    "evidence_strength": 0.2398475158365374,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7601524841634627,
-    "conflict_uncertainty": 0.719542547509612,
+    "evidence_uncertainty": 0.7601524841634626,
+    "conflict_uncertainty": 0.7195425475096122,
     "uncertainty": 0.5199237579182687,
     "confidence": 0.4800762420817313,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4397,
+    "bayes_suspicion": 0.2574,
     "bayes_posterior": {
-      "H0": 0.4397,
-      "H1": 0.3436,
-      "H2": 0.2167
+      "H0": 0.2574,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.637, P(H1)=0.363, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.72).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3000,7 +3234,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7185132677765866,
+    "spectral_evidence": 0.7185132677765868,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -3013,38 +3247,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7185132677765866,
+    "conflict": 0.7185132677765868,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.23950442259219554,
+    "evidence_strength": 0.2395044225921956,
     "coverage_uncertainty": 0.0,
-    "evidence_uncertainty": 0.7604955774078045,
-    "conflict_uncertainty": 0.7185132677765866,
-    "uncertainty": 0.5197522112960978,
-    "confidence": 0.48024778870390217,
+    "evidence_uncertainty": 0.7604955774078044,
+    "conflict_uncertainty": 0.7185132677765868,
+    "uncertainty": 0.5197522112960977,
+    "confidence": 0.4802477887039023,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4394,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.4394,
-      "H1": 0.3439,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.636, P(H1)=0.363, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.72).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3087,25 +3322,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4393,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.4393,
-      "H1": 0.344,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.636, P(H1)=0.364, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.72).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3148,25 +3384,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.439,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.439,
-      "H1": 0.3443,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.2 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.635, P(H1)=0.365, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.72).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3209,25 +3446,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4382,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.4382,
-      "H1": 0.3451,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.633, P(H1)=0.367, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.71).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3270,25 +3508,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4379,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.4379,
-      "H1": 0.3454,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.1 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.632, P(H1)=0.368, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.71).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3331,25 +3570,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4372,
+    "bayes_suspicion": 0.2573,
     "bayes_posterior": {
-      "H0": 0.4372,
-      "H1": 0.3461,
-      "H2": 0.2167
+      "H0": 0.2573,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "WEAK_BAYES_FACTOR",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 3.0 (decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.630, P(H1)=0.370, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.029, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.71).",
       "Only 1/3 agents reported.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3366,7 +3606,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.7069471394314454,
+    "spectral_evidence": 0.7069471394314453,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -3379,40 +3619,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.7069471394314454,
+    "conflict": 0.7069471394314453,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.23564904647714846,
+    "evidence_strength": 0.23564904647714843,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7643509535228515,
-    "conflict_uncertainty": 0.7069471394314454,
+    "conflict_uncertainty": 0.7069471394314453,
     "uncertainty": 0.5178245232385742,
     "confidence": 0.4821754767614258,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4066,
+    "bayes_suspicion": 0.2574,
     "bayes_posterior": {
-      "H0": 0.4066,
-      "H1": 0.3434,
-      "H2": 0.25
+      "H0": 0.2574,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
       "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.9 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.626, P(H1)=0.374, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.71).",
       "Only 1/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3455,27 +3694,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4059,
+    "bayes_suspicion": 0.2574,
     "bayes_posterior": {
-      "H0": 0.4059,
-      "H1": 0.3441,
-      "H2": 0.2501
+      "H0": 0.2574,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
       "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.8 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.623, P(H1)=0.376, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.70).",
       "Only 1/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3518,27 +3756,26 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4055,
+    "bayes_suspicion": 0.2575,
     "bayes_posterior": {
-      "H0": 0.4055,
-      "H1": 0.3445,
-      "H2": 0.2501
+      "H0": 0.2575,
+      "H1": 0.3713,
+      "H2": 0.3713
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
       "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.8 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.622, P(H1)=0.378, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H0', 'H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.030, P(H1)=0.485, P(H2)=0.485.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.70).",
       "Only 1/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3555,7 +3792,7 @@
     "spectral_status": "DETECTED",
     "feature_status": "NO_DETECTION",
     "spatial_evidence": 0.0,
-    "spectral_evidence": 0.6837058028634215,
+    "spectral_evidence": 0.6837058028634213,
     "feature_evidence": 0.0,
     "available_agents": [
       "spatial",
@@ -3568,40 +3805,39 @@
     ],
     "support_count": 1,
     "agreement": 0.3333333333333333,
-    "conflict": 0.6837058028634215,
+    "conflict": 0.6837058028634213,
     "conflict_state": "HIGH",
     "evidence_pattern": "THERMAL-ONLY EVIDENCE",
-    "evidence_strength": 0.22790193428780717,
+    "evidence_strength": 0.2279019342878071,
     "coverage_uncertainty": 0.0,
     "evidence_uncertainty": 0.7720980657121929,
-    "conflict_uncertainty": 0.6837058028634215,
+    "conflict_uncertainty": 0.6837058028634213,
     "uncertainty": 0.5139509671439035,
     "confidence": 0.48604903285609646,
     "reliability": "LOW",
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.4011,
+    "bayes_suspicion": 0.2583,
     "bayes_posterior": {
-      "H0": 0.4011,
-      "H1": 0.3488,
-      "H2": 0.2501
+      "H0": 0.2583,
+      "H1": 0.3708,
+      "H2": 0.3708
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
       "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 2.4 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.604, P(H1)=0.395, P(H2)=0.000.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with ['H1', 'H2'].",
+      "Bayesian posterior: P(H0)=0.033, P(H1)=0.483, P(H2)=0.483.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.68).",
       "Only 1/3 agents reported.",
-      "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "Best hypothesis does not clearly beat the runner-up."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0
@@ -3644,27 +3880,28 @@
     "bayes_decision": "UNCERTAIN - REVIEW",
     "bayes_hypothesis": null,
     "bayes_camouflage_detected": false,
-    "bayes_suspicion": 0.3946,
+    "bayes_suspicion": 0.3189,
     "bayes_posterior": {
-      "H0": 0.3946,
-      "H1": 0.3552,
-      "H2": 0.2502
+      "H0": 0.3189,
+      "H1": 0.3406,
+      "H2": 0.3406
     },
     "bayes_flags": [
       "HIGH_CONFLICT",
       "MODERATE_UNCERTAINTY",
       "MISSING_EVIDENCE",
       "WEAK_BAYES_FACTOR",
-      "CAMO_VS_ORDINARY_CONFUSION"
+      "NO_HYPOTHESIS_FITS",
+      "NARROW_MARGIN"
     ],
     "bayes_explanation": [
-      "Hypothesis test: best=H0, BF over H1 = 1.9 (not decisive); consistent with ['H0', 'H1'].",
-      "Bayesian posterior: P(H0)=0.578, P(H1)=0.421, P(H2)=0.001.",
-      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'CAMO_VS_ORDINARY_CONFUSION'].",
+      "Hypothesis test: best=H1, BF over H2 = 1.0 (not decisive); consistent with none.",
+      "Bayesian posterior: P(H0)=0.044, P(H1)=0.478, P(H2)=0.478.",
+      "Metacognition flags: ['HIGH_CONFLICT', 'MODERATE_UNCERTAINTY', 'MISSING_EVIDENCE', 'WEAK_BAYES_FACTOR', 'NO_HYPOTHESIS_FITS', 'NARROW_MARGIN'].",
       "Agents disagree strongly (conflict=0.66).",
       "Only 1/3 agents reported.",
       "Best hypothesis does not clearly beat the runner-up.",
-      "Cannot separate camouflaged from ordinary object."
+      "Evidence is inconsistent with all three hypotheses (possible novel case)."
     ],
     "rule_decision": "N/A",
     "rule_confidence": 0.0

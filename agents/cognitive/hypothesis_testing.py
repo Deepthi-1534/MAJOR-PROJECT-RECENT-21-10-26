@@ -1,7 +1,7 @@
 """hypothesis_testing.py - Stage 1: compare H0 / H1 / H2 using likelihoods and Bayes factors."""
 import math
 from typing import List
-from .common import HYPS, Evidence, log_norm_pdf, chi2_sf
+from .common import HYPS, Evidence, log_norm_pdf, chi2_sf, presence_loglik
 
 
 def hypothesis_test(evidence: List[Evidence], models, alpha: float = 0.05,
@@ -12,7 +12,7 @@ def hypothesis_test(evidence: List[Evidence], models, alpha: float = 0.05,
     - best hypothesis is 'supported' only if BF over the runner-up >= bf_threshold
     - goodness-of-fit chi-square per hypothesis (p < alpha => evidence inconsistent with it)
     """
-    loglik = {h: 0.0 for h in HYPS}
+    loglik = presence_loglik(models, [e.name for e in evidence])   # zeros unless calibrated
     chi2 = {h: 0.0 for h in HYPS}
     for e in evidence:
         for h in HYPS:

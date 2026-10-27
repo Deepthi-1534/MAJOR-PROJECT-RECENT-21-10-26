@@ -4,95 +4,72 @@
     {
       "id": 1,
       "bbox_xywh": [
-        0,
-        0,
-        512,
-        512
+        480,
+        317,
+        32,
+        34
       ],
-      "detector_class": "hedge",
+      "detector_class": "net3dgreen",
       "decision": "CAMOUFLAGE DETECTED",
-      "confidence": 0.8711,
+      "confidence": 0.5681,
       "parameters": {
-        "spatial_evidence": 0.978,
-        "spectral_evidence": 0.766,
-        "feature_evidence": 0.818,
-        "agents_supporting": "3/3",
-        "conflict": 0.212,
-        "uncertainty": 0.122,
-        "cognitive_p_camouflaged": 0.638
+        "spatial_evidence": 0.956,
+        "spectral_evidence": null,
+        "feature_evidence": 0.647,
+        "agents_supporting": "2/3",
+        "conflict": 0.956,
+        "uncertainty": 0.473,
+        "cognitive_p_camouflaged": 0.466
       },
-      "rule": "Score 0.87 >= 0.45.",
+      "rule": "Score 0.57 >= 0.45.",
       "fusion_method": "simple"
     },
     {
       "id": 2,
       "bbox_xywh": [
         352,
-        256,
+        272,
         64,
-        68
+        64
       ],
       "detector_class": "net2dgreen",
       "decision": "CAMOUFLAGE DETECTED",
-      "confidence": 0.5867,
+      "confidence": 0.5679,
       "parameters": {
-        "spatial_evidence": 0.925,
+        "spatial_evidence": 0.854,
         "spectral_evidence": null,
-        "feature_evidence": 0.98,
+        "feature_evidence": 0.992,
         "agents_supporting": "1/3",
-        "conflict": 0.98,
-        "uncertainty": 0.44,
-        "cognitive_p_camouflaged": 0.383
+        "conflict": 0.992,
+        "uncertainty": 0.451,
+        "cognitive_p_camouflaged": 0.466
       },
-      "rule": "Score 0.59 >= 0.45.",
+      "rule": "Score 0.57 >= 0.45.",
       "fusion_method": "simple"
     },
     {
       "id": 3,
       "bbox_xywh": [
-        0,
-        0,
-        246,
-        256
+        368,
+        400,
+        48,
+        55
       ],
-      "detector_class": "persongreen",
+      "detector_class": "personyellow",
       "decision": "CAMOUFLAGE DETECTED",
-      "confidence": 0.5862,
+      "confidence": 0.5441,
       "parameters": {
-        "spatial_evidence": 0.83,
-        "spectral_evidence": 0.766,
-        "feature_evidence": null,
-        "agents_supporting": "2/3",
-        "conflict": 0.83,
-        "uncertainty": 0.436,
-        "cognitive_p_camouflaged": 0.386
-      },
-      "rule": "Score 0.59 >= 0.45.",
-      "fusion_method": "simple"
-    },
-    {
-      "id": 4,
-      "bbox_xywh": [
-        416,
-        96,
-        39,
-        65
-      ],
-      "detector_class": "tarpgray",
-      "decision": "CAMOUFLAGE DETECTED",
-      "confidence": 0.5816,
-      "parameters": {
-        "spatial_evidence": 0.977,
+        "spatial_evidence": 0.854,
         "spectral_evidence": null,
-        "feature_evidence": 0.712,
+        "feature_evidence": 0.689,
         "agents_supporting": "2/3",
-        "conflict": 0.977,
-        "uncertainty": 0.468,
-        "cognitive_p_camouflaged": 0.331
+        "conflict": 0.854,
+        "uncertainty": 0.45,
+        "cognitive_p_camouflaged": 0.466
       },
-      "rule": "Score 0.58 >= 0.45.",
+      "rule": "Score 0.54 >= 0.45.",
       "fusion_method": "simple"
     }
   ],
-  "uncertain_candidates_not_shown": 52
+  "uncertain_candidates_not_shown": 31
 }

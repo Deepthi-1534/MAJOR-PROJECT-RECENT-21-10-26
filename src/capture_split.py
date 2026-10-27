@@ -25,7 +25,7 @@ TRAIN_RATIO = 0.70
 VAL_RATIO = 0.15
 TEST_RATIO = 0.15
 
-SEED = 42
+SEED = 42 # controls the pseudorandom shuffle: makes the shuffle reproducible when its like in the same order capture list
 
 
 # ===================
@@ -62,7 +62,7 @@ def find_complete_captures():
     return captures
 
 
-# CREATE SPLIT
+# CREATE  MASTER CAPTURE SPLIT
 
 
 def create_split():

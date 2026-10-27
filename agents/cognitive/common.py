@@ -1,6 +1,8 @@
 """common.py - shared constants, helpers, data structures and default models."""
+import json
 import math
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Dict, List, Optional
 
 EPS = 1e-9
@@ -73,6 +75,63 @@ DEFAULT_MODELS: Dict[str, Dict[str, Gauss]] = {
     "spectral": {"H0": Gauss(0.75, 0.15), "H1": Gauss(0.45, 0.20), "H2": Gauss(0.12, 0.10)},
     "feature":  {"H0": Gauss(0.75, 0.15), "H1": Gauss(0.50, 0.20), "H2": Gauss(0.12, 0.10)},
 }
+
+
+# --------------------------------------------------------------------------------------
+# Calibrated models (optional)
+#
+# DEFAULT_MODELS above are assumptions. calibrate.py can fit them from labelled candidates and
+# writes models/cognitive_models.json; when that file exists the cognitive agent uses it.
+# The calibrated file also holds PRESENCE likelihoods: P(agent reports | Hk). Whether an agent
+# reported anything at all is strong evidence (e.g. a camouflaged object is almost always seen by
+# the spatial agent, background almost never), and the score-only update ignores it.
+# Without the file nothing changes: behaviour is identical to before.
+# --------------------------------------------------------------------------------------
+
+AGENT_NAMES = ("spatial", "spectral", "feature")
+PRESENCE_KEY = "_presence"
+CALIBRATED_MODELS_PATH = Path(__file__).resolve().parents[2] / "models" / "cognitive_models.json"
+
+
+def models_to_json(models) -> dict:
+    out = {"models": {}, "presence": models.get(PRESENCE_KEY, {})}
+    for agent, per_h in models.items():
+        if agent == PRESENCE_KEY:
+            continue
+        out["models"][agent] = {h: {"mu": g.mu, "sd": g.sd} for h, g in per_h.items()}
+    return out
+
+
+def models_from_json(data: dict):
+    models = {agent: {h: Gauss(float(v["mu"]), float(v["sd"])) for h, v in per_h.items()}
+              for agent, per_h in data["models"].items()}
+    if data.get("presence"):
+        models[PRESENCE_KEY] = {a: {h: float(p) for h, p in per_h.items()}
+                                for a, per_h in data["presence"].items()}
+    return models
+
+
+def load_calibrated_models(path=None):
+    """Models fitted by calibrate.py, or None when no calibration file exists."""
+    p = Path(path) if path else CALIBRATED_MODELS_PATH
+    if not p.exists():
+        return None
+    with open(p, "r", encoding="utf-8") as f:
+        return models_from_json(json.load(f))
+
+
+def presence_loglik(models, present_names) -> Dict[str, float]:
+    """log P(which agents reported | Hk); all zeros when the models carry no presence information."""
+    pres = models.get(PRESENCE_KEY) if isinstance(models, dict) else None
+    if not pres:
+        return {h: 0.0 for h in HYPS}
+    present = set(present_names)
+    out = {h: 0.0 for h in HYPS}
+    for agent in AGENT_NAMES:
+        for h in HYPS:
+            p = min(max(float(pres.get(agent, {}).get(h, 0.5)), 1e-3), 1 - 1e-3)
+            out[h] += math.log(p if agent in present else 1.0 - p)
+    return out
 
 
 @dataclass

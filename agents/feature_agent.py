@@ -15,12 +15,12 @@ MODEL_DIR = Path("models")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 IMAGE_SIZE = 64
-STRIDE = 32
+STRIDE = 16
 BATCH_SIZE = 128
 
-THRESHOLD = 0.70
+THRESHOLD = 0.60
 
-MIN_AREA = 20
+MIN_AREA = 8
 
 
 # ==================================================
@@ -697,7 +697,7 @@ class FeatureAgent:
         ).astype(np.uint8) * 255
 
         kernel = np.ones(
-            (5, 5),
+            (3, 3),
             np.uint8
         )
 

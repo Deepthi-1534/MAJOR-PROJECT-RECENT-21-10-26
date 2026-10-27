@@ -5,11 +5,15 @@ evaluate.py - compare fusion methods on a held-out candidate CSV (build it from 
 
 Methods compared (candidate level, positive = candidate matches a ground-truth target):
   bayes_only   : P(H0) from the Bayesian cognitive layer
-  weighted     : reliability-weighted fusion (agents/fusion)
+  weighted     : reliability-weighted fusion (agents/fusion, FUSION_METHOD = "weighted")
+  simple       : the simple fusion (agents/fusion, FUSION_METHOD = "simple" - the pipeline default)
+  spatial_only : the spatial agent's evidence on its own (a sanity baseline)
   learned      : trained meta-classifier
+
+A candidate counts as detected when its score >= the method's detect threshold. Candidates sent to
+review count as "not detected" in precision / recall.
 """
 import argparse
-import csv
 import json
 from pathlib import Path
 
@@ -17,16 +21,10 @@ import joblib
 import numpy as np
 from sklearn.metrics import average_precision_score, roc_auc_score
 
+from ..fusion.common import implausible_reason
+from ..fusion.simple_fusion import SimpleFusionAgent
+from .dataset import build_matrix, load_dataset, row_to_candidate
 from .features import FEATURE_NAMES
-
-
-def load(path):
-    rows = list(csv.DictReader(open(path, newline="", encoding="utf-8")))
-    X = np.array([[float(r[n]) for n in FEATURE_NAMES] for r in rows])
-    y = np.array([int(float(r["label"])) for r in rows])
-    weighted = np.array([float(r["weighted_suspicion"]) for r in rows])
-    caps = np.array([r["capture"] for r in rows])
-    return X, y, weighted, caps
 
 
 def metrics(score, y, detect_t, clear_t):
@@ -50,6 +48,18 @@ def metrics(score, y, detect_t, clear_t):
     }
 
 
+def learned_scores(bundle, rows, captures):
+    """Score the csv with a saved model; context features are computed per capture, exactly as
+    the fusion agent does at run time."""
+    use_context = bundle.get("use_context", bundle["feature_names"] != FEATURE_NAMES)
+    X, names = build_matrix(rows, use_context)
+    if names != bundle["feature_names"]:
+        raise SystemExit("Model features do not match this CSV. Retrain with the current code.")
+    raw = bundle["model"].predict_proba(X)[:, 1]
+    r = np.clip(raw, 1e-4, 1 - 1e-4)
+    return bundle["calibrator"].predict_proba(np.log(r / (1 - r)).reshape(-1, 1))[:, 1]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", required=True)
@@ -57,27 +67,41 @@ def main():
     ap.add_argument("--out", default="outputs/review1/fusion_eval.json")
     args = ap.parse_args()
 
-    X, y, weighted, caps = load(args.data)
-    print(f"Rows: {len(y)} | positives: {int(y.sum())} | captures: {len(set(caps))}")
+    _, y, captures, _, rows, _ = load_dataset([args.data], use_context=False)
+    print(f"Rows: {len(y)} | positives: {int(y.sum())} | captures: {len(set(captures))}")
     if y.sum() == 0 or y.sum() == len(y):
         raise SystemExit("Need both positive and negative candidates to evaluate.")
 
     bundle = joblib.load(args.model)
-    raw = bundle["model"].predict_proba(X)[:, 1]
-    lg = np.log(np.clip(raw, 1e-4, 1 - 1e-4) / (1 - np.clip(raw, 1e-4, 1 - 1e-4))).reshape(-1, 1)
-    learned = bundle["calibrator"].predict_proba(lg)[:, 1]
-    bayes = X[:, FEATURE_NAMES.index("bayes_h0")]
+    learned = learned_scores(bundle, rows, captures)
+
+    weighted = np.array([float(r["weighted_suspicion"]) for r in rows])
+    bayes = np.array([float(r["bayes_h0"]) for r in rows])
+    spatial = np.array([float(r["spatial_evidence"]) * float(r["spatial_present"]) for r in rows])
+    simple_agent = SimpleFusionAgent()
+    simple = np.array([simple_agent.score(row_to_candidate(r))[0] for r in rows])
+    sc = simple_agent.simple
+
+    # Every fusion method rejects boxes too large to be one object (agents/fusion/common.py),
+    # so apply the same rule here: those candidates can never be detected.
+    too_big = np.array([implausible_reason(row_to_candidate(r)) is not None for r in rows])
+    print(f"Rejected by the size rule: {int(too_big.sum())} candidates "
+          f"({int((too_big & (y == 1)).sum())} of them true targets)")
+    bayes, weighted, simple, spatial, learned = (np.where(too_big, 0.0, s)
+                                                 for s in (bayes, weighted, simple, spatial, learned))
 
     results = {
         "bayes_only": metrics(bayes, y, 0.6, 0.4),
         "weighted": metrics(weighted, y, 0.6, 0.4),
+        "simple": metrics(simple, y, sc.detect_threshold, sc.clear_threshold),
+        "spatial_only": metrics(spatial, y, 0.5, 0.25),
         "learned": metrics(learned, y, bundle["detect_threshold"], bundle["clear_threshold"]),
     }
 
     cols = ["roc_auc", "avg_precision", "precision", "recall", "f1", "review_rate", "missed_in_clear_band"]
-    print(f"\n{'method':12s}" + "".join(f"{c:>24s}" for c in cols))
+    print(f"\n{'method':14s}" + "".join(f"{c:>22s}" for c in cols))
     for name, m in results.items():
-        print(f"{name:12s}" + "".join(f"{m[c]:>24}" for c in cols))
+        print(f"{name:14s}" + "".join(f"{m[c]:>22}" for c in cols))
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

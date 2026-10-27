@@ -15,6 +15,7 @@ from .common import (
     HYPS,
     NAMES,
     DEFAULT_MODELS,
+    load_calibrated_models,
     Evidence,
     CognitiveResult,
     clip01,
@@ -47,7 +48,8 @@ class CognitiveAgent:
         bf_threshold: float = 3.0,
         accept_threshold: float = 0.5,
     ):
-        self.models = models or DEFAULT_MODELS
+        # explicit models > models/cognitive_models.json (from calibrate.py) > built-in assumptions
+        self.models = models or load_calibrated_models() or DEFAULT_MODELS
         self.prior = prior
         self.alpha = alpha
         self.bf = bf_threshold
